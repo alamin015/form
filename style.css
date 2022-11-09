@@ -111,9 +111,9 @@ form .button{
 
 @media (max-width: 570px) {
     .glass{
-        width: 90%;
+        width: 94%;
     }
-    form{
+    .glass form{
         width: 97%;
     }
     .button{
