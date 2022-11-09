@@ -1,0 +1,125 @@
+:root{
+    --text: #426696;
+    --border: #4266963d;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right top, #65dfc9,#6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.circle{
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    
+}
+.circle1{
+    left: 15%;
+    bottom: 5%;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0));
+    animation: anim 5s linear infinite;
+    /* animation: anim 1s alternate infinite linear; */
+}
+@keyframes anim {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.circle2{
+    right: 15%;
+    top: 5%;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0));
+    animation: anim 6s linear infinite;
+}
+
+.glass{
+    min-height: 70vh;
+    width: 60%;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.1));
+    border-radius: 1rem;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass form{
+    padding: 5px;
+    width: 60%;
+}
+form .form_group{
+    margin-bottom: 10px;
+}
+
+form input{
+    display: block;
+    width: 100%;
+    padding: 14px 6px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    outline: none;
+    font-size: 16px;
+}
+::placeholder{
+    color: var(--text);
+    font-size: 16px;
+}
+
+form .button{
+    margin-bottom: 0px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.button button{
+    width: 170px;
+    height: 50px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.button button:hover{
+    color: #fff;
+    background: var(--text);
+    cursor: pointer;
+}
+
+@media (max-width: 570px) {
+    .glass{
+        width: 90%;
+    }
+    form{
+        width: 97%;
+    }
+    .button{
+        width: 100%;
+    }
+    .button button{
+        width: 100%;
+    }
+}
